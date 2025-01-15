@@ -31,11 +31,10 @@ public class ProductService {
 
     public Product updateProduct(Long id, Product productDetails) {
         Product product = getProductById(id);
-        product.getName();
-//        product.setName(productDetails.getName());
-//        product.setPrice(productDetails.getPrice());
-//        product.setCategory(productDetails.getCategory());
-//        product.setDescription(productDetails.getDescription());
+        product.setName(productDetails.getName());
+        product.setPrice(productDetails.getPrice());
+        product.setCategory(productDetails.getCategory());
+        product.setDescription(productDetails.getDescription());
         return productRepository.save(product);
     }
 
